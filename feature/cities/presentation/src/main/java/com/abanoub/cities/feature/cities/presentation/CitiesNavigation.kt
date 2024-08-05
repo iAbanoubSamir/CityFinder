@@ -13,7 +13,9 @@ fun NavGraphBuilder.citiesScreen(
     onCityClick: (City) -> Unit
 ) {
     composable<Cities> {
-        CitiesRoute()
+        CitiesRoute(
+            onCityClick = onCityClick
+        )
     }
 }
 

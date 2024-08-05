@@ -42,14 +42,15 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 internal fun CitiesRoute(
     modifier: Modifier = Modifier,
-    viewModel: CitiesViewModel = koinViewModel()
+    viewModel: CitiesViewModel = koinViewModel(),
+    onCityClick: (City) -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     CitiesScreen(
         modifier = modifier,
         uiState = uiState,
         onQueryChange = { query -> viewModel.onEvent(CitiesUiEvent.SearchCities(query)) },
-        onCityClick = {}
+        onCityClick = onCityClick
     )
 }
 

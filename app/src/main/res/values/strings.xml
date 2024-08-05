@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">City Finder</string>
+    <string name="please_install_google_maps">Please install google maps.</string>
 </resources>
