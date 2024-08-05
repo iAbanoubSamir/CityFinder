@@ -3,7 +3,19 @@ package com.abanoub.cities.feature.cities.data.util.strcture
 import com.abanoub.cities.feature.cities.data.local.dto.CityDto
 
 /**
- * A Trie data structure for efficient prefix-based searching of cities.
+ * A Trie data structure is used for efficient prefix-based searching.
+ *
+ * **Why Trie?**
+ *
+ * 1. **Prefix Matching Efficiency**: Trie allows for quick prefix searches, which is ideal for autocomplete or search-as-you-type features. This is because Trie nodes represent individual characters, making it easy to traverse based on the prefix input.
+ *
+ * 2. **Performance**: Trie provides better performance for searching operations compared to linear search algorithms or even binary search trees when dealing with a large dataset of strings. It supports O(m) time complexity for search operations, where m is the length of the prefix.
+ *
+ * 3. **Scalability**: With the Trie structure, as the dataset grows, the time complexity for searches remains manageable, which is crucial for handling large datasets like our cities list.
+ *
+ * 4. **Efficient Memory Use**: Although Tries use more memory than simple hash tables or arrays, they provide efficient prefix querying which aligns with our use case of searching cities by prefix.
+ *
+ * This makes Trie a suitable choice for our city search feature, where users can type partial city names to get matching results quickly.
  *
  * This Trie implementation supports inserting city names and searching for cities
  * based on a given prefix. Each node in the Trie represents a character in city names,
