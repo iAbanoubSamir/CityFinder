@@ -35,10 +35,7 @@ class LocalCitiesDataSource(
      * @return A list of [CityDto] objects matching the prefix.
      */
     override suspend fun searchCities(prefix: String): List<CityDto> = withContext(Dispatchers.IO) {
-        if (prefix.isEmpty()) {
-            return@withContext loadAndParseCities()
-        }
-        trie.search(prefix)
+        if (prefix.isEmpty()) emptyList() else trie.search(prefix)
     }
 
     /**

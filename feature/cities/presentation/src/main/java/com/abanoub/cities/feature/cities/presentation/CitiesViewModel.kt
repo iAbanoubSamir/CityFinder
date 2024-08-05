@@ -18,13 +18,6 @@ class CitiesViewModel(
     private var _uiState = MutableStateFlow(CitiesUiState())
     val uiState: StateFlow<CitiesUiState> get() = _uiState
 
-    init {
-        /**
-         * Perform initial search with an empty query to load all cities.
-         */
-        onEvent(CitiesUiEvent.SearchCities(""))
-    }
-
     fun onEvent(event: CitiesUiEvent) {
         when (event) {
             is CitiesUiEvent.SearchCities -> searchCities(event.prefix)
