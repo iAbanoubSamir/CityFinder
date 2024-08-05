@@ -34,6 +34,8 @@ android {
 
 dependencies {
 
+    implementation(projects.core.ui)
+
     implementation(libs.androidx.core.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
