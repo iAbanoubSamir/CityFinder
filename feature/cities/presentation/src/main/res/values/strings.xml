@@ -2,4 +2,5 @@
 <resources>
     <string name="search_box_placeholder">Search…</string>
     <string name="nav_cities_title">City Finder</string>
+    <string name="empty_cities_message">Please enter a search query to see results.</string>
 </resources>

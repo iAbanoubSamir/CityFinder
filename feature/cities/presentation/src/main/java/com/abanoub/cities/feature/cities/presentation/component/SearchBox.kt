@@ -1,6 +1,7 @@
 package com.abanoub.cities.feature.cities.presentation.component
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Search
@@ -32,6 +33,7 @@ fun SearchBox(
             .drawBehind { drawRect(background) }
     ) {
         TextField(
+            modifier = Modifier.fillMaxWidth(),
             textStyle = MaterialTheme.typography.labelMedium,
             colors = TextFieldDefaults.colors().copy(
                 focusedIndicatorColor = Color.Transparent,
