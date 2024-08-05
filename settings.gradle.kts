@@ -22,6 +22,8 @@ dependencyResolutionManagement {
 rootProject.name = "CityFinder"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
-include(":feature:cities")
 include(":core:common")
 include(":core:ui")
+include(":feature:cities:data")
+include(":feature:cities:domain")
+include(":feature:cities:presentation")
