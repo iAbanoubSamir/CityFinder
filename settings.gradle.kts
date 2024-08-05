@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "City Finder"
 include(":app")
+include(":feature:cities")
