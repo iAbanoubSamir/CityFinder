@@ -19,6 +19,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "City Finder"
+rootProject.name = "CityFinder"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":feature:cities")
+include(":core:common")
+include(":core:ui")
